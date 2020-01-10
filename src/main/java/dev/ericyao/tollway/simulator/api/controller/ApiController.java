@@ -1,4 +1,4 @@
-package dev.ericyao.tollway.simulator.controller;
+package dev.ericyao.tollway.simulator.api.controller;
 
 import java.util.List;
 import java.util.Random;
@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 import dev.ericyao.tollway.simulator.object.Vehicle;
 
 @RestController
-public class Controller {
+public class ApiController {
 	
 	@Value("${tollway.client.url}")
 	private String tollwayClientUrl;

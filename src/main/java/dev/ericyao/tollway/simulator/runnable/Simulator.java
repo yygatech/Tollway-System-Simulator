@@ -4,20 +4,20 @@ import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import dev.ericyao.tollway.simulator.controller.Controller;
+import dev.ericyao.tollway.simulator.api.controller.ApiController;
 import dev.ericyao.tollway.simulator.object.Vehicle;
 
 public class Simulator extends Thread {
 	
 	private Random rand = new Random();
 	
-	private Controller controller;
+	private ApiController controller;
 	
 	private int timeout;
 	private int session;
 	private int maxNumberFlowPerSession;
 	
-	public Simulator(Controller controller, int timeout, int session, int maxNumberFlowPerSession) {
+	public Simulator(ApiController controller, int timeout, int session, int maxNumberFlowPerSession) {
 		this.controller = controller;
 		this.timeout = timeout;
 		this.session = session;

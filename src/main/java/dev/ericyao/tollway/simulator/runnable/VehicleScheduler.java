@@ -2,7 +2,7 @@ package dev.ericyao.tollway.simulator.runnable;
 
 import javax.validation.constraints.NotNull;
 
-import dev.ericyao.tollway.simulator.controller.Controller;
+import dev.ericyao.tollway.simulator.api.controller.ApiController;
 import dev.ericyao.tollway.simulator.object.Vehicle;
 
 public class VehicleScheduler implements Runnable {
@@ -11,7 +11,7 @@ public class VehicleScheduler implements Runnable {
 	private Vehicle vehicle;
 	private int lag;
 	
-	private Controller controller;
+	private ApiController controller;
 	
 	public VehicleScheduler(@NotNull Vehicle vehicle) {
 		super();
@@ -50,11 +50,11 @@ public class VehicleScheduler implements Runnable {
 		this.lag = lag;
 	}
 
-	public Controller getController() {
+	public ApiController getController() {
 		return controller;
 	}
 
-	public void setController(Controller controller) {
+	public void setController(ApiController controller) {
 		this.controller = controller;
 	}
 	
