@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 import dev.ericyao.tollway.simulator.object.Vehicle;
 
 @RestController
-public class ApiController {
+public class ClientApiController {
 	
 	@Value("${tollway.client.url}")
 	private String tollwayClientUrl;
